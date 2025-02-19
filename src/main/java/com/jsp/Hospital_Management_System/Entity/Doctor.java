@@ -5,8 +5,6 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.ManyToOne;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -35,12 +33,17 @@ public class Doctor {
     @Column(nullable = false, unique = true)
     private String email;
 
-    @ManyToOne
-    @JoinColumn(name="department_id")
-    private Department department;
+    private int department_id;
 
-	
-    
-    
+	public Doctor(int doctorId, String firstName, String lastName, String specialization, String contactNumber,
+			String email) {
+		super();
+		this.doctorId = doctorId;
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.specialization = specialization;
+		this.contactNumber = contactNumber;
+		this.email = email;
+	}
 
 }

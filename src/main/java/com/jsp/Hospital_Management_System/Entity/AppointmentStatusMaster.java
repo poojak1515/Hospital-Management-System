@@ -13,18 +13,14 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class Services {
+public class AppointmentStatusMaster {
 	@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int serviceId;
-
-    @Column(nullable = false)
-    private String name;
-
-    private String description;
-
-    @Column(nullable = false)
-    private Double cost;
-
+    private int statusId;
+	
+	@Column(nullable = false)
+	private String status;
+	
+	private String details; 
 
 }
