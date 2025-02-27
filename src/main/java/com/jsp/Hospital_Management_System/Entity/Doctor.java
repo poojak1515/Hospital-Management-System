@@ -32,11 +32,14 @@ public class Doctor {
 
     @Column(nullable = false, unique = true)
     private String email;
+    
+    @Column(nullable = false, unique = true)
+    private String password;
 
     private int department_id;
 
 	public Doctor(int doctorId, String firstName, String lastName, String specialization, String contactNumber,
-			String email) {
+			String email, String password) {
 		super();
 		this.doctorId = doctorId;
 		this.firstName = firstName;
@@ -44,6 +47,7 @@ public class Doctor {
 		this.specialization = specialization;
 		this.contactNumber = contactNumber;
 		this.email = email;
+		this.password=password;
 	}
 
 }

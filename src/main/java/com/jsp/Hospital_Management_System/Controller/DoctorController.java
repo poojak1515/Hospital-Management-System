@@ -47,4 +47,10 @@ public class DoctorController {
 		public String deleteDoctor(@PathVariable("id") Integer id) {
 			return doctorDao.deleteDoctorById(id);
 		}
+		
+		@GetMapping("/verifyDoctor/{id}/{password}")
+		public boolean verifyDoctor(@PathVariable("id")Integer id,@PathVariable("password") String password) {
+			return doctorDao.verifyPatient(id, password);
+			
+		}
 }

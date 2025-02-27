@@ -51,4 +51,15 @@ public class PatientsDao {
 		
 	}
 
+	public boolean verifyPatient(int id, String password) {
+		Patient existingpatient=patientsRepo.findById(id).orElseThrow(()->new RuntimeException("patient not found"));
+		
+		if(existingpatient.getPatientId()==id && existingpatient.getPassword().equals(password))
+			return true;
+		else
+			return false;
+				
+				
+	}
+
 }

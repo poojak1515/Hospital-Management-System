@@ -3,10 +3,9 @@ package com.jsp.Hospital_Management_System.repository;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import com.jsp.Hospital_Management_System.Entity.Patient;
+import com.jsp.Hospital_Management_System.Entity.BloodTypes;
 
 @Repository
-public interface PatientsRepository extends JpaRepository<Patient, Integer>{
-	
+public interface BloodTypesRepository extends JpaRepository<BloodTypes, Integer> {
 
 }

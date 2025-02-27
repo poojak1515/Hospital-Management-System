@@ -33,16 +33,19 @@ public class Patient {
     private int gender;// master table
 
     @Column(nullable = false, unique = true)
-    private String contactNumber;
+    private Long contactNumber;
 
     @Column(unique = true)
     private String email;
+    
+    @Column(nullable = false, unique = true)
+    private String password;
 
     @Column(nullable = false)
     private String address;
 
-    @Column(nullable = false)
-    private String emergencyContact;
+   
+    private Long emergencyContact;
 
     private int bloodType;//master table
 }
