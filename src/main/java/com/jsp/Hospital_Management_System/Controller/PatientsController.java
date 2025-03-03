@@ -48,7 +48,7 @@ public class PatientsController {
 		
 	}
 	
-	@GetMapping("/verifyPatient/{id}/{password}")
+	@PostMapping("/verifyPatient/{id}/{password}")
 	public boolean verifyPatient(@PathVariable("id")Integer id,@PathVariable("password") String password) {
 		return patientDao.verifyPatient(id, password);
 		
